@@ -10,7 +10,7 @@ public class Main {
         System.out.println("hello");
 
 
-        Jdbi jdbi = Jdbi.create("jdbc:mysql://localhost/bookish", "bookish", "bookish");
+        Jdbi jdbi = Jdbi.create("jdbc:mysql://localhost/bookish?user=bookish&password=bookish&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT");
 
 
         List<Person> people = jdbi.withHandle(handle -> {
